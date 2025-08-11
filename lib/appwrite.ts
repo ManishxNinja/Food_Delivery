@@ -11,18 +11,16 @@ export const appwriteConfig = {
   userCollectionId: '68987cfe00076bb22f2e',
   categoriesCollectionId: '689977b5001a1442d10d',
   menuCollectionId: '6899789c002d967eb17d',
-  customizationsCollectionId: '68997adf0034fc8d30e5'
+  customizationsCollectionId: '68997adf0034fc8d30e5',
+  menuCustomizationsCollectionId: '68997d2e001e5067e772'
 } 
-
-
-
 
 export const client = new Client();
 
 client
-    .setEndpoint(appwriteConfig.endpoint)
-    .setProject(appwriteConfig.projectId)
-    .setPlatform(appwriteConfig.platform)
+    .setEndpoint(appwriteConfig.endpoint!)
+    .setProject(appwriteConfig.projectId!)
+    .setPlatform(appwriteConfig.platform!)
 
 export const account = new Account(client);
 export const databases = new Databases(client);
